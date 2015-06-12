@@ -7,13 +7,14 @@
           {{input value=author id="author" class="form-control"}}
         </div>
 
-        <div class="col-sm-8form-group">
+        <div class="col-sm-8 form-group">
           <label for="question">Your Question</label>
-          {{input value=author id="author" class="form-control"}}
+          {{input value=question id="question" class="form-control"}}
         </div>
 
-        <div class="col-sm-1">
-          <button class="btn btn-primary" {{action 'askQuestion'}}>Ask!</button>
+        <div class="col-sm-1 form-group">
+          <label for="ask"> </label>
+          <button id="ask" class="btn btn-primary" {{action 'askQuestion'}}>Ask!</button>
         </div>
       </form>
     </div>
