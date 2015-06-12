@@ -2,20 +2,30 @@
   {{#if askingQuestion}}
     <div class="ask-question-form-container">
       <form>
-        <div class="col-sm-3 form-group">
-          <label for="author">Your Name</label>
-          {{input value=author id="author" class="form-control"}}
+        <div class="row">
+            <div class="col-sm-3 form-group">
+              <label for="author">Your Name</label>
+              {{input value=author id="author" class="form-control"}}
+            </div>
+
+            <div class="col-sm-9 form-group">
+              <label for="question">Your Question</label>
+              {{input value=question id="question" class="form-control"}}
+            </div>
         </div>
 
-        <div class="col-sm-8 form-group">
-          <label for="question">Your Question</label>
-          {{input value=question id="question" class="form-control"}}
+        <div class="row">
+            <div class="col-sm-10 form-group">
+              <label for="description">Details</label>
+              {{input value=description id="description" class="form-control"}}
+            </div>
+
+            <div class="col-sm-2 form-group">
+              <label for="ask"></label><br>
+              <button id="ask" class="btn btn-warning" {{action 'askQuestion'}}>Ask!</button>
+            </div>
         </div>
 
-        <div class="col-sm-1 form-group">
-          <label for="ask"> </label>
-          <button id="ask" class="btn btn-primary" {{action 'askQuestion'}}>Ask!</button>
-        </div>
       </form>
     </div>
   {{else}}
@@ -24,5 +34,7 @@
 </div>
 
 <div class="row well">
-  Questions
+  {{#each }}
+    <br />{{question}} 
+  {{/each}}
 </div>
