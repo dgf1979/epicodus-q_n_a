@@ -41,14 +41,14 @@
           <th>Author</th><th>Question</th>
         </tr>
       </thead>
-      {{#each}}
+      {{#each question in model}}
         <tbody>
           <tr>
             <td>
-              {{author}}
+              {{question.author}}
             </td>
             <td>
-              {{#link-to 'question' class='question-link'}}{{question}}{{/link-to}}
+              {{#link-to 'question' question class='question-link'}}{{question.question}}{{/link-to}}
             </td>
           </tr>
         </tbody>

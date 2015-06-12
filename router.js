@@ -1,4 +1,4 @@
 App.Router.map(function() {
   this.resource('questions', {path: '/'});
-  this.resource('question');
+  this.resource('question', {path: ':question_id'});
 });
