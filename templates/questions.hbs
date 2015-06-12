@@ -48,13 +48,13 @@
               {{question.author}}
             </td>
             <td>
-              {{#link-to 'question' question class='question-link'}}{{question.question}}{{/link-to}}
+              {{#link-to 'question' question}}{{question.question}}{{/link-to}}
             </td>
             <td>
               {{question.date}}
             </td>
             <td>
-              <span class="btn btn-danger">Edit</span>
+              {{#link-to 'edit-question' question}}<span class="btn btn-danger">Edit</span>{{/link-to}}
             </td>
           </tr>
         </tbody>
