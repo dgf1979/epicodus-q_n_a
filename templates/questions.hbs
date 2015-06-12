@@ -38,7 +38,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Author</th><th>Question</th>
+          <th>Author</th><th>Question</th><th>Posted</th><th></th>
         </tr>
       </thead>
       {{#each question in model}}
@@ -49,6 +49,12 @@
             </td>
             <td>
               {{#link-to 'question' question class='question-link'}}{{question.question}}{{/link-to}}
+            </td>
+            <td>
+              {{question.date}}
+            </td>
+            <td>
+              <span class="btn btn-danger">Edit</span>
             </td>
           </tr>
         </tbody>

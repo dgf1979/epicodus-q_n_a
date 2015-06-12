@@ -5,7 +5,7 @@ App.QuestionController = Ember.ObjectController.extend({
       var newAnswer = this.store.createRecord('answer', {
         answer: this.get('answer'),
         author: this.get('answerAuthor'),
-        date: new Date(),
+        date: (new Date()).toLocaleTimeString("en-us") + " on " + (new Date()).toLocaleDateString("en-us")
       });
       newAnswer.save();
 

@@ -1,13 +1,17 @@
 <div class="row well">
-  <h1>{{question}}</h1>
-  <h5>Posted on: {{date}} by: {{author}}</h5>
-  <h3>Details:</h3>
-  <div id="question-details-view">
-    {{description}}
+  <h6>
+    <span class="italic">Posted on:</span> {{date}}
+      by: <span class="italic">{{author}}</span>
+  </h6>
+  <br />
+  <span class="italic"><h2>"{{question}}?"</h2></span>
+  <br />
+  <div class="section">
+    DETAILS: {{description}}
   </div>
 </div>
 
-<h1>Answers:</h1>
+<h2>Answers:</h2>
 <div class="row well">
   {{#if answeringQuestion}}
     <div class="answer-question-form-container">
@@ -38,7 +42,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Author</th><th>Answer</th>
+          <th>Author</th><th>Answer</th><th>Posted</th><th></th>
         </tr>
       </thead>
       {{#each answer in answers}}
@@ -52,6 +56,9 @@
           </td>
           <td>
             {{answer.date}}
+          </td>
+          <td>
+            <span class="btn btn-danger">Delete</span>
           </td>
         </tr>
       {{/each}}
