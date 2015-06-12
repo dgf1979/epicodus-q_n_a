@@ -34,7 +34,25 @@
 </div>
 
 <div class="row well">
-  {{#each }}
-    <br />{{question}} 
-  {{/each}}
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Author</th><th>Question</th>
+        </tr>
+      </thead>
+      {{#each}}
+        <tbody>
+          <tr>
+            <td>
+              {{author}}
+            </td>
+            <td>
+              {{#link-to 'question' class='question-link'}}{{question}}{{/link-to}}
+            </td>
+          </tr>
+        </tbody>
+      {{/each}}
+    </table>
+  </div>
 </div>
