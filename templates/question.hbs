@@ -46,7 +46,6 @@
         </tr>
       </thead>
       {{#each answer in answers}}
-        {{log 'Answer is:' answer}}
         <tr>
           <td>
             {{answer.author}}
@@ -58,7 +57,7 @@
             {{answer.date}}
           </td>
           <td>
-            <span class="btn btn-danger">Delete</span>
+            <button class="btn btn-danger" {{action 'deleteAnswer' answer}}>Delete</button>
           </td>
         </tr>
       {{/each}}

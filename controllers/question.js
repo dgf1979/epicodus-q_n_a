@@ -17,6 +17,13 @@ App.QuestionController = Ember.ObjectController.extend({
     },
     showAnswerForm: function() {
       this.set('answeringQuestion', true);
+    },
+    deleteAnswer: function(answer) {
+      if(confirm('Are you sure?')) {
+        answer.destroyRecord();
+        var question = this.model;
+        question.save();
+      };
     }
   }
 });
